@@ -1,0 +1,132 @@
+/* =================================================
+   MENÜ SAYFASI GENEL ALANI
+   menu.html içindeki <main class="menu-page">
+================================================= */
+
+.menu-page {
+  padding: 120px 32px 64px;
+  /* Üstten navbar mesafesi, sağ-sol boşluk, alttan nefes */
+  
+  text-align: center;
+  /* Sayfadaki tüm yazıları ortalar */
+}
+
+
+/* =================================================
+   MENÜ BAŞLIĞI
+   "MENÜ" yazısı
+================================================= */
+
+.menu-title {
+  font-size: 2.4rem;
+  /* Başlığın büyüklüğü */
+
+  letter-spacing: 0.3rem;
+  /* Harfler arası mesafe → elit görünüm */
+
+  margin-bottom: 48px;
+  /* Kartlarla arasına boşluk */
+}
+
+
+/* =================================================
+   TÜM KARTLARI TUTAN ALAN
+================================================= */
+
+.menu-cards {
+  display: grid;
+  /* Kartları ızgara sistemiyle dizer */
+
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 sütun yapar */
+
+  gap: 32px;
+  /* Kartlar arası boşluk */
+
+  max-width: 900px;
+  /* Çok açılmasını engeller */
+
+  margin: 0 auto;
+  /* Ortalar */
+}
+
+
+/* =================================================
+   TEK BİR MENÜ KARTI
+================================================= */
+
+.menu-card {
+  display: block;
+  /* <a> etiketi tüm kartı kaplasın */
+
+  text-decoration: none;
+  /* Alt çizgiyi kaldır */
+
+  color: #ffffff;
+  /* Yazı rengi */
+
+  border: 1px solid rgba(245, 196, 83, 0.25);
+  /* Altın tonlu çerçeve */
+
+  border-radius: 20px;
+  /* Yuvarlak köşeler */
+
+  padding: 24px;
+  /* İç boşluk */
+
+  transition: 
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  /* Hover animasyonu */
+}
+
+
+/* =================================================
+   KARTA HOVER OLDUĞUNDA
+================================================= */
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  /* Kart hafif yukarı kalkar */
+
+  border-color: #f5c453;
+  /* Çerçeve altın sarısı olur */
+}
+
+
+/* =================================================
+   FOTO / GÖRSEL ALANI
+   Şimdilik boş, sonra arka plan verilecek
+================================================= */
+
+.menu-card-image {
+  height: 180px;
+  /* Görsel alanın yüksekliği */
+
+  border-radius: 14px;
+  /* Görsel köşeleri yuvarlat */
+
+  margin-bottom: 16px;
+  /* Başlıktan boşluk */
+
+  background: rgba(255, 255, 255, 0.05);
+  /* Placeholder rengi */
+}
+
+
+/* =================================================
+   KART İÇİNDEKİ BAŞLIK
+   Ara Öğünler / İçecekler vs.
+================================================= */
+
+.menu-card h2 {
+  text-align: center;
+  /* Başlığı ortala */
+
+  letter-spacing: 0.2rem;
+  /* Harfleri aç */
+
+  font-size: 1.1rem;
+  /* Başlık boyutu */
+}
+

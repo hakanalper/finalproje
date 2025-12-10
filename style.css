@@ -1,0 +1,157 @@
+/* =====================
+   GENEL AYARLAR
+===================== */
+
+body {
+  margin: 0;
+  /* Tarayıcının varsayılan boşluklarını siler */
+
+  background: #050816;
+  /* Sitenin arka plan rengi (gece laciverti) */
+
+  color: #ffffff;
+  /* Tüm yazıların varsayılan rengi */
+
+  font-family: system-ui, sans-serif;
+  /* Okunaklı, modern yazı tipi */
+}
+
+
+/* =====================
+   NAVBAR
+===================== */
+
+.nav {
+  height: 96px;
+  /* Navbar yüksekliği (biraz daha tok dursun) */
+
+  padding: 0 40px;
+  /* Sağdan soldan boşluk */
+
+  display: flex;
+  /* Elemanları yatay dizmek için */
+  align-items: center;
+  /* Dikey ortalar */
+  justify-content: space-between;
+  /* Sol ve sağı ayırır */
+
+  border-bottom: 1px solid rgba(245, 196, 83, 0.3);
+  /* Altın tonlu ince çizgi */
+
+  position: relative;
+  /* Logoyu ortaya alabilmek için referans */
+}
+
+.nav-logo {
+  display: flex;
+  /* Yazı ve yıldız yan yana dursun */
+
+  gap: 8px;
+  /* Aralarına boşluk koy */
+
+  letter-spacing: 0.25rem;
+  /* Harfler arası açıklık (elit durur) */
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Logoyu yatayda tam ortaya al */
+
+  font-size: 1.5rem;
+  /* Genel logo ölçeği */
+}
+
+.logo-text {
+  color: #f5c453;
+  /* Altın renk logo yazısı */
+
+  font-size: 1.6em;
+  /* Logo yazısını büyüt */
+}
+
+.logo-star {
+  color: #f4d58d;
+  /* Yıldız biraz daha soft altın */
+
+  font-size: 1.8em;
+  /* Yıldızı azıcık daha büyük yap */
+}
+
+.nav-links a {
+  margin-left: 16px;
+  /* Linkler arası boşluk */
+
+  color: #b0b3c0;
+  /* Normal durum rengi */
+
+  text-decoration: none;
+  /* Alt çizgiyi kaldır */
+
+  font-size: 1.05rem;
+  /* Menü yazıları biraz büyüsün */
+}
+
+.nav-links a:hover {
+  color: #f5c453;
+  /* Üzerine gelince altın olur */
+}
+
+
+/* =====================
+   HERO (ORTA BÖLÜM)
+===================== */
+
+.hero {
+  /* Navbarın altındaki büyük karşılama alanı */
+  min-height: calc(100vh - 96px);  /* Ekranı doldursun, navbar yüksekliğini düş */
+  display: flex;
+  flex-direction: column;          /* Üst üste diz */
+  align-items: center;             /* Ortala (yatay) */
+  justify-content: center;         /* Ortala (dikey) */
+  text-align: center;              /* Yazıları ortala */
+  padding: 32px;                   /* Kenarlardan boşluk */
+  gap: 12px;                       /* Elemanlar arası boşluk */
+  text-transform: uppercase;       /* Hero içindeki tüm yazılar büyük harf */
+}
+
+.hero-logo {
+  /* Ortadaki büyük logo (SVG) */
+  width: 40vw;          /* Ekranın %40’ı genişlik */
+  max-width: 520px;     /* Çok büyümesin */
+  min-width: 260px;     /* Çok da ufalmayın */
+  height: auto;         /* Oranı koru */
+  display: block;
+  margin-bottom: 8px;   /* Altındaki yazıdan hafif boşluk */
+}
+
+.hero-title {
+  /* İstersen kullanırsın, şu an yoksa da sorun değil */
+  font-size: 2.4rem;
+  letter-spacing: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #f5c453;       /* Altın ton */
+  font-style: italic;   /* Italic yazı */
+}
+
+.hero-text {
+  /* Daha uzun açıklama metni */
+  max-width: 520px;         /* Çok yayılmasın */
+  font-size: 0.95rem;
+  color: #b0b3c0;
+  line-height: 1.6;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #f5c453;      /* Altın */
+  color: #050816;           /* Koyu zemin rengi */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
