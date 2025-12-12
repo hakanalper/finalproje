@@ -155,3 +155,51 @@ body {
   font-weight: 600;
   letter-spacing: 0.15em;
 }
+.site-footer {
+  background-color: #050816;
+  color: #ccc;
+  padding: 90px 20px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 200px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p {
+  margin: 4px 0;
+}
+.sponsors {
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sponsor-logos img {
+  width: 100%;
+  max-width: 120px;
+  opacity: 0.8;
+}
