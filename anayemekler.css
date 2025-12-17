@@ -1,10 +1,10 @@
-/* ARA ÖĞÜNLER ALANI */
-.ara-ogunler {
+/* ANA YEMEKLER ALANI */
+.ana-yemekler {
   padding: 60px 10%;
   background-color: #070d29;
 }
 
-.ara-ogunler h1 {
+.ana-yemekler h1 {
     color: #efbf4e;
   text-align: center;
   margin-bottom: 40px;
@@ -12,13 +12,13 @@
 }
 
 /* KARTLAR */
-.ara-ogunler-container {
+.ana-yemekler-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.ara-ogun-card {
+.ana-yemek-card {
   color: #ffffff;
   background-color: #efbf4e;
 
@@ -30,29 +30,29 @@
   transition: transform 0.3s;
 }
 
-.ara-ogun-card:hover {
+.ana-yemek-card:hover {
   transform: translateY(-6px);
 }
 
-.ara-ogun-card img {
+.ana-yemek-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.ara-ogun-card h2 {
+.ana-yemek-card h2 {
     color: #09164e;
   margin: 15px 0 8px;
   font-size: 20px;
 }
 
-.ara-ogun-card p {
+.ana-yemek-card p {
     color: #1a2969;
   font-size: 14px;
 }
 
-.ara-ogun-card span {
+.ana-yemek-card span {
   display: block;
   margin-top: 10px;
   font-weight: bold;
