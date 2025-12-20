@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezervasyon | Novaletta</title>
+  <link rel="stylesheet" href="rezervasyon.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-logo">
+    <span class="logo-text">NOVALETTA</span>
+    <span class="logo-star">✦</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html#hero">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="rezervasyon.html" class="active-link">Reservation</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="index.html#hakkımızda">About Us</a>
+  </nav>
+</header>
+
+<main class="page">
+  <h1>Rezervasyon</h1>
+  <p class="sub">
+    Masanı seç, bilgilerini gir, onayla. Yeşil boş, kırmızı dolu. Mavi seçili.
+  </p>
+
+  <section class="layout-card">
+    <div class="legend">
+      <span class="dot empty"></span> Boş
+      <span class="dot selected"></span> Seçili
+      <span class="dot booked"></span> Dolu
+      <button id="resetBtn" class="ghost">Sıfırla (demo)</button>
+    </div>
+
+    <div class="floor-wrap" id="floorWrap" aria-label="Masa planı">
+      
+      <img src="ab3c45817be0b56b3e2c0b159ae88e11.png" alt="Restoran Krokisi" class="floor-img" />
+
+      <!-- Masalar JS ile buraya basılıyor -->
+      <div class="tables-layer" id="tablesLayer"></div>
+    </div>
+  </section>
+
+  <section class="form-card">
+    <h2>Seçim</h2>
+
+    <div class="chosen">
+      <div><span>Seçilen Masa:</span> <strong id="chosenTable">—</strong></div>
+      <div><span>Durum:</span> <strong id="chosenStatus">—</strong></div>
+    </div>
+
+    <form id="resForm" class="res-form">
+      <label>
+        Ad Soyad
+        <input required name="name" type="text" placeholder="Hakan Alper Ekmekçi" />
+      </label>
+
+      <label>
+        Telefon
+        <input required name="phone" type="tel" placeholder="05xx xxx xx xx" />
+      </label>
+
+      <label>
+        Tarih
+        <input required name="date" type="date" />
+      </label>
+
+      <label>
+        Saat
+        <input required name="time" type="time" />
+      </label>
+
+      <label>
+        Kişi Sayısı
+        <input required name="people" type="number" min="1" max="12" value="2" />
+      </label>
+
+      <button type="submit" class="primary">Rezervasyonu Onayla</button>
+      <p class="hint">
+        Onaylayınca seçili masa doluya döner (localStorage).
+      </p>
+    </form>
+  </section>
+</main>
+
+<script src="rezervasyon.js"></script>
+</body>
+</html>
