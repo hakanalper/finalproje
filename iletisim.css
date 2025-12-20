@@ -1,0 +1,252 @@
+/* =====================
+   RESET + GENEL
+===================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  background: #050816;
+  color: #ffffff;
+  font-family: system-ui, sans-serif;
+
+  /* Footer'ı alta sabitleyen yapı */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.nav {
+  height: 96px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(245, 196, 83, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #050816;
+  z-index: 9999;
+}
+
+.nav-logo {
+  display: flex;
+  gap: 8px;
+  letter-spacing: 0.25rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  color: #f5c453;
+  font-size: 1.6em;
+}
+
+.logo-star {
+  color: #f4d58d;
+  font-size: 1.8em;
+}
+
+.nav-links {
+  margin-left: auto;
+}
+
+.nav-links a {
+  margin-left: 16px;
+  color: #b0b3c0;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.nav-links a:hover {
+  color: #f5c453;
+}
+
+/* =====================
+   ANA İÇERİK ALANI
+   Footer'ın alta inmesi için flex:1
+===================== */
+main {
+  flex: 1;                  /* KRİTİK */
+  padding-top: 120px;       /* fixed navbar boşluğu */
+}
+
+/* Eğer sayfada main yoksa hero gibi section'lar var.
+   Hero'yu direkt sayfa ana içerik yapıyorsan bu da iş görür. */
+.hero {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 32px;
+  gap: 12px;
+  text-transform: uppercase;
+}
+
+.hero-logo {
+  width: 40vw;
+  max-width: 520px;
+  min-width: 260px;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #f5c453;
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 520px;
+  font-size: 0.95rem;
+  color: #b0b3c0;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #f5c453;
+  color: #050816;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+/* =====================
+   FOOTER (EN ALTA YAPIŞIK)
+===================== */
+.site-footer {
+  margin-top: auto; /* KRİTİK: içerik kısa olsa bile en alta iter */
+  background-color: #050816;
+  color: #ccc;
+  padding: 60px 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(245, 196, 83, 0.18);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-section p {
+  margin: 4px 0;
+}
+
+/* Sponsor logoları */
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sponsor-logos img {
+  width: 100%;
+  max-width: 120px;
+  opacity: 0.8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .nav {
+    padding: 0 18px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    margin-left: 12px;
+  }
+
+  .footer-container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-logo {
+    width: 70vw;
+    min-width: 200px;
+  }
+
+  .sponsor-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.info-box {
+  max-width: 400px;
+  margin: auto;          /* yatay ortalar */
+  text-align: center;    /* içindeki yazıları ortalar */
+}
+.nav {
+  height: 96px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* space-between yerine */
+  gap: 24px;
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: #050816;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(245, 196, 83, 0.3);
+}
+
+.nav-links {
+  margin-left: 0;              /* auto olmasın */
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  margin-left: 0;              /* gap kullanıyoruz */
+}
+
