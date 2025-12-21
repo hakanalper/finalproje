@@ -194,3 +194,28 @@ body {
   max-width: 120px;
   opacity: 0.8;
 }
+body {
+  margin: 0;
+}
+
+#karAlani {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #050816;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.fa-snowflake-o {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  animation: yagis linear forwards;
+}
+
+@keyframes yagis {
+  to {
+    transform: translateY(105vh);
+  }
+}
