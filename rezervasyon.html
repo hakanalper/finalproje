@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rezervasyon | Novaletta</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="rezervasyon.css" />
   <meta name="description" content="Novaletta masa planından masanı seç, tarih ve saat belirle, rezervasyonunu kolayca oluştur.">
 </head>
-<body>
+<body class="page">
 
-<header class="nav">
+<header class="nav reveal delay-1">
   <div class="nav-logo">
     <span class="logo-text">NOVALETTA</span>
     <span class="logo-star">✦</span>
@@ -25,12 +26,12 @@
 </header>
 
 <main class="page">
-  <h1>Rezervasyon</h1>
-  <p class="sub">
+  <h1 class="reveal delay-2">Rezervasyon</h1>
+  <p class="sub reveal delay-3">
     Masanı seç, bilgilerini gir, onayla. Yeşil boş, kırmızı dolu. Mavi seçili.
   </p>
 
-  <section class="layout-card">
+  <section class="layout-card reveal delay-4">
     <div class="legend">
       <span class="dot empty"></span> Boş
       <span class="dot selected"></span> Seçili
@@ -47,7 +48,7 @@
     </div>
   </section>
 
-  <section class="form-card">
+  <section class="form-card reveal delay-4">
     <h2>Seçim</h2>
 
     <div class="chosen">
@@ -90,5 +91,6 @@
 </main>
 
 <script src="rezervasyon.js"></script>
+<script src="reveal.js"></script>
 </body>
 </html>

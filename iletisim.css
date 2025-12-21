@@ -1,5 +1,4 @@
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
+•⁠{ box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { height: 100%; }
 
@@ -268,24 +267,42 @@ main {
     margin-bottom: 8px;
   }
 }
-@media (max-width: 700px) {
-  .nav {
-    height: auto;
-    padding: 12px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* ===== FIX: Rezervasyon navbar mobile çakışma ===== */
+@media (max-width: 800px) {
+  .nav{
+    height: auto !important;
+    padding: 12px 14px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
   }
-  .nav-logo {
-    position: static;
-    transform: none;
+
+  .nav-logo{
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
   }
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 12px;
+
+  .nav-links{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 12px !important;
   }
-  .nav-links a { margin-left: 0; }
-  .page { padding-top: 170px; }
+
+  .nav-links a{
+    margin-left: 0 !important;
+  }
+
+  /* fixed nav büyüdüğü için içerik aşağı insin */
+  .page{
+    padding-top: 180px !important;
+  }
 }

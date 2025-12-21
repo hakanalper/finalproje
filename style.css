@@ -112,9 +112,12 @@ body {
   text-align: center;              /* Yazıları ortala */
   padding: 32px;                   /* Kenarlardan boşluk */
   gap: 12px;                       /* Elemanlar arası boşluk */
-  text-transform: uppercase;       /* Hero içindeki tüm yazılar büyük harf */
+    text-transform: none; /* Türkçe için default: none */
 }
 
+
+/* İstersen yalnızca belirli sayfalarda büyük harf: <section class="hero uppercase"> */
+.hero.uppercase { text-transform: uppercase; }
 .hero-logo {
   /* Ortadaki büyük logo (SVG) */
   width: 40vw;          /* Ekranın %40’ı genişlik */
@@ -559,5 +562,53 @@ body {
     gap: 10px 12px;
   }
   .nav-links a { margin-left: 0; }
+  .page { padding-top: 170px; }
+}
+/* ===== NAV RESPONSIVE (GLOBAL) ===== */
+@media (max-width: 900px) {
+  .nav { padding: 0 18px; }
+  .nav-logo { font-size: 1.2rem; }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    height: auto;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    position: static;
+    left: auto;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* Fixed navbar yüzünden anchor/padding */
+html { scroll-padding-top: 160px; }
+.page { padding-top: 120px; }
+
+@media (max-width: 800px) {
   .page { padding-top: 170px; }
 }
