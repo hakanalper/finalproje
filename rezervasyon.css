@@ -79,9 +79,9 @@ h1 { font-size: 2rem; margin-bottom: 8px; }
   display: inline-block;
   margin-right: 6px;
 }
-.dot.empty { background: #22c55e; }
-.dot.selected { background: #60a5fa; }
-.dot.booked { background: #ef4444; }
+.dot.empty { background: #05e256; }
+.dot.selected { background: #5aa4ff; }
+.dot.booked { background: #f73b3b; }
 
 .ghost {
   margin-left: auto;
@@ -131,9 +131,9 @@ h1 { font-size: 2rem; margin-bottom: 8px; }
   transform: translate(-50%, -50%); /* % koordinatları ortadan oturt */
 }
 
-.table-dot.empty { background: #22c55e; }
-.table-dot.booked { background: #ef4444; cursor: not-allowed; opacity: .95; }
-.table-dot.selected { background: #60a5fa; }
+.table-dot.empty { background: #2de671; }
+.table-dot.booked { background: #d62424; cursor: not-allowed; opacity: .95; }
+.table-dot.selected { background: #3d85df; }
 
 .table-dot:hover { filter: brightness(1.05); }
 
@@ -187,4 +187,127 @@ h1 { font-size: 2rem; margin-bottom: 8px; }
 @media (max-width: 700px) {
   .res-form { grid-template-columns: 1fr; }
   .primary, .hint { grid-column: span 1; }
+}
+/* ============================
+   HUMANIZE PATCH (override)
+   Bunu en alta yapıştır
+============================ */
+
+/* Başlıklar ve açıklama */
+.page h1{
+  font-size: 2.2rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.page .sub{
+  max-width: 720px;
+  line-height: 1.6;
+  color: rgba(176,179,192,0.95);
+  margin-bottom: 26px;
+}
+
+/* Kart görünümünü daha doğal yap */
+.layout-card, .form-card{
+  border: 1px solid rgba(245, 196, 83, 0.12);
+  border-radius: 12px;
+  padding: 22px;
+  background: rgba(0,0,0,0.18);
+  margin-bottom: 22px;
+}
+
+/* Legend daha az “UI kit” gibi */
+.legend{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  color: rgba(176,179,192,0.95);
+  font-size: 0.95rem;
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 6px;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.08);
+}
+
+.dot.empty{ background: #2fd17a; }
+.dot.selected{ background: #6aa8ff; }
+.dot.booked{ background: #ff4d4d; }
+
+/* Masa noktaları premium dursun */
+.table-dot{
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(255,255,255,0.55);
+  color: rgba(5,8,22,0.92);
+  font-weight: 800;
+  font-size: 12px;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform .12s ease, filter .12s ease;
+}
+
+.table-dot.empty{ background: #2fd17a; }
+.table-dot.booked{ background: #ff4d4d; }
+.table-dot.selected{ background: #6aa8ff; }
+
+.table-dot:hover{
+  transform: translate(-50%, -50%) scale(1.06);
+  filter: brightness(1.03);
+}
+
+/* Reset butonu (Sıfırla) daha temiz */
+.ghost{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.02);
+  padding: 8px 12px;
+}
+
+.ghost:hover{
+  border-color: rgba(245, 196, 83, 0.55);
+}
+
+/* Form daha “gerçek” hissetsin */
+.res-form label{
+  font-size: 0.9rem;
+  color: rgba(176,179,192,0.95);
+}
+
+.res-form input{
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+}
+
+.res-form input::placeholder{
+  color: rgba(176,179,192,0.65);
+}
+
+.res-form input:focus{
+  border-color: rgba(245, 196, 83, 0.6);
+}
+
+/* Onay butonu: daha premium */
+.primary{
+  padding: 14px 14px;
+  border-radius: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Hint yazısını biraz daha sakinleştir */
+.hint{
+  color: rgba(176,179,192,0.85);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
