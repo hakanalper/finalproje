@@ -185,8 +185,8 @@ body {
 }
 
 .sponsor-logos img {
-  width: 100%;
-  max-width: 120px;
+  width: 200%;
+  max-width: 200px;
   opacity: 0.8;
 }
 body {
