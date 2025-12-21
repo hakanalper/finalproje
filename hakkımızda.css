@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   /* Tarayıcının varsayılan boşluklarını siler */
@@ -267,5 +265,70 @@ body {
 
   .sponsor-logos{
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HAKKIMIZDA EK BİLGİ ALANI */
+.about-info-wrapper {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* ÜSTTEKİ METİN KUTUSU */
+.about-text-box {
+  background: rgba(9, 14, 40, 0.6);
+  border: 1px solid rgba(245, 196, 83, 0.25);
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+}
+
+.about-text-box p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #b0b3c0;
+  font-style: italic;
+}
+
+/* RESTORAN BİLGİLERİ */
+.about-stats-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stat-item {
+  background: rgba(9, 14, 40, 0.8);
+  border: 1px solid rgba(245, 196, 83, 0.3);
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  margin: 0;
+  font-size: 2.4rem;
+  color: #f5c453;
+  letter-spacing: 0.15em;
+}
+
+.stat-item span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #b0b3c0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* MOBİL */
+@media (max-width: 700px) {
+  .about-stats-box {
+    grid-template-columns: 1fr;
   }
 }
