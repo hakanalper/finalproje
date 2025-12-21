@@ -142,3 +142,25 @@
 .delay-2 { transition-delay: 0.35s; }
 .delay-3 { transition-delay: 0.55s; }
 .delay-4 { transition-delay: 0.75s; }
+/* Kartları 3->2->1 düşür */
+@media (max-width: 900px){
+  .menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px){
+  .menu-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .menu-card{
+    padding: 16px;
+  }
+}
+
+
+

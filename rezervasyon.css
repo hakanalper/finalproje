@@ -188,4 +188,30 @@ h1 { font-size: 2rem; margin-bottom: 8px; }
   .res-form { grid-template-columns: 1fr; }
   .primary, .hint { grid-column: span 1; }
 }
+@media (max-width: 900px){
+  .reservation-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-grid .form-card{
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 600px){
+  .table-dot{
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .res-form{
+    grid-template-columns: 1fr;
+  }
+
+  .primary{
+    width: 100%;
+  }
+}
 

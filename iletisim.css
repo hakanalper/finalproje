@@ -237,4 +237,35 @@ main {
 .nav-links a {
   margin-left: 0;             
 }
+@media (max-width: 900px){
+  .map-wrapper iframe{
+    height: 340px;
+  }
+
+  .info-box{
+    max-width: 520px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 600px){
+  .map-wrapper{
+    padding-top: 120px; /* fixed nav varsa */
+  }
+
+  .map-wrapper iframe{
+    height: 280px;
+  }
+
+  .info-box{
+    width: calc(100% - 24px);
+    margin: 14px auto 0;
+    text-align: left;
+  }
+
+  .info-box h2{
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+}
 

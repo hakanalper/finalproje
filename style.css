@@ -229,3 +229,106 @@ body {
 .delay-2 { transition-delay: 0.35s; }
 .delay-3 { transition-delay: 0.55s; }
 .delay-4 { transition-delay: 0.75s; }
+
+/* 1) Büyük tablet ve altı */
+@media (max-width: 900px) {
+  .nav{
+    padding: 0 18px;
+  }
+
+  /* Logo ortada kalsın ama küçülsün */
+  .nav-logo{
+    font-size: 1.2rem;
+  }
+
+  /* Menü yazıları küçülsün */
+  .nav-links a{
+    font-size: 0.98rem;
+  }
+
+  /* Hero daha rahat nefes alsın */
+  .hero{
+    padding: 26px 18px;
+  }
+
+  .hero-logo{
+    width: 62vw;
+    min-width: 210px;
+  }
+
+  .hero-text{
+    max-width: 680px;
+  }
+
+  /* Footer alt alta yaklaşsın */
+  .footer-container{
+    gap: 24px;
+  }
+}
+
+/* 2) Telefon */
+@media (max-width: 600px) {
+  /* Nav: linkler taşmasın */
+  .nav{
+    height: auto;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Logo üstte ortada */
+  .nav-logo{
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  /* Linkler alt satır, ortalı */
+  .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-left: 0;
+    padding-bottom: 6px;
+  }
+
+  .nav-links a{
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  /* Fixed nav yüzünden içerik üstten boşluk */
+  .page{
+    padding-top: 130px;
+  }
+
+  .hero{
+    min-height: calc(100vh - 120px);
+    padding: 22px 14px;
+    gap: 10px;
+  }
+
+  .hero-subtitle{
+    font-size: 1rem;
+  }
+
+  .hero-text{
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Footer: kolonlar alt alta */
+  .footer-container{
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* Sponsor logoları 2 sütun */
+  .sponsor-logos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

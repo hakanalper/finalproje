@@ -200,3 +200,72 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* Tablet ve altı */
+@media (max-width: 900px){
+  .nav{ padding: 0 18px; }
+  .nav-logo{ font-size: 1.2rem; }
+
+  .hero-logo{
+    width: 62vw;
+    min-width: 210px;
+  }
+
+  .footer-container{ gap: 24px; }
+}
+
+/* Telefon */
+@media (max-width: 600px){
+  .nav{
+    height: auto;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-logo{
+    position: static;
+    left: auto;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-left: 0;
+    padding-bottom: 6px;
+  }
+
+  .nav-links a{
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  /* Fixed nav yüzünden içerik üst boşluğu */
+  .hero,
+  .about-page,
+  .page{
+    padding-top: 130px;
+  }
+
+  .hero-logo{
+    width: 70vw;
+    min-width: 200px;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .sponsor-logos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
