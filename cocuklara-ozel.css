@@ -93,3 +93,24 @@
 .back-btn:active{
   transform: translateY(0);
 }
+@media (max-width: 700px) {
+  .nav {
+    height: auto;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-logo {
+    position: static;
+    transform: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 12px;
+  }
+  .nav-links a { margin-left: 0; }
+  .page { padding-top: 170px; }
+}
