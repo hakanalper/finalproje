@@ -60,6 +60,7 @@ body {
 
   font-size: 1.5rem;
   /* Genel logo ölçeği */
+  z-index: 1;
 }
 
 .logo-text {
@@ -90,6 +91,7 @@ body {
 
   font-size: 1.05rem;
   /* Menü yazıları biraz büyüsün */
+  z-index: 1000;
 }
 
 .nav-links a:hover {
@@ -102,7 +104,7 @@ body {
 
 .hero {
   /* Navbarın altındaki büyük karşılama alanı */
-  min-height: calc(100vh - 96px);  /* Ekranı doldursun, navbar yüksekliğini düş */
+  min-height: calc(100vh - 96px);  
   display: flex;
   flex-direction: column;          /* Üst üste diz */
   align-items: center;             /* Ortala (yatay) */
@@ -125,7 +127,7 @@ body {
 }
 
 .hero-title {
-  /* İstersen kullanırsın, şu an yoksa da sorun değil */
+  
   font-size: 2.4rem;
   letter-spacing: 0.25rem;
 }
@@ -419,5 +421,122 @@ body {
   .sponsor-logos {
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 0 18px;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.18rem;
+  }
+
+  .logo-text { font-size: 1.35em; }
+  .logo-star { font-size: 1.55em; }
+}
+
+
+@media (max-width: 600px) {
+  .nav {
+    
+    padding: 0 12px;
+  }
+
+  .nav-logo {
+    position: static;      
+    left: auto;
+    transform: none;
+
+    justify-self: center;  
+    margin: 0 auto;       
+
+    font-size: 1.05rem;
+    letter-spacing: 0.12rem;
+    gap: 6px;
+    white-space: nowrap;   
+    z-index: 1;
+  }
+
+  .logo-text { font-size: 1.25em; }
+  .logo-star { font-size: 1.35em; }
+}
+.nav-links a {
+  margin-left: 16px;
+  /* Linkler arası boşluk */
+
+  color: #b0b3c0;
+  /* Normal durum rengi */
+
+  text-decoration: none;
+  /* Alt çizgiyi kaldır */
+
+  font-size: 1.05rem;
+  /* Menü yazıları biraz büyüsün */
+  z-index: 1000;
+}
+/* =====================
+   MOBILE NAV EMERGENCY FIX
+   (override'ları ezer)
+===================== */
+@media (max-width: 700px) {
+
+  .nav {
+    height: auto !important;
+    padding: 12px 14px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  /* LOGO: artık kesinlikle absolute değil */
+  .nav-logo {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    white-space: nowrap !important;
+    gap: 6px !important;
+
+    font-size: 1.1rem !important;
+    letter-spacing: 0.14rem !important;
+  }
+
+  /* LINKLER: kesinlikle ikinci satır, ortalı ve wrap */
+  .nav-links {
+    width: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    flex-wrap: wrap !important;
+    gap: 10px 12px !important;
+  }
+
+  .nav-links a {
+    margin-left: 0 !important;
+    font-size: 0.95rem !important;
+    padding: 6px 10px !important;
+
+    border-radius: 999px !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    background: rgba(0,0,0,0.15) !important;
+  }
+
+  /* Nav artık büyüdüğü için içerik aşağı insin */
+  .page {
+    padding-top: 180px !important;
   }
 }
