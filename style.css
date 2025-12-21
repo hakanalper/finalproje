@@ -120,6 +120,7 @@ body {
   min-width: 260px;     /* Çok da ufalmayın */
   height: auto;         /* Oranı koru */
   display: block;
+  z-index: 1000000000000;
   margin-bottom: 8px;   /* Altındaki yazıdan hafif boşluk */
 }
 

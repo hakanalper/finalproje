@@ -219,7 +219,7 @@ main {
   padding: 0 40px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;  /* space-between yerine */
+  justify-content: flex-start;  
   gap: 24px;
   position: fixed;
   top: 0; left: 0; width: 100%;
@@ -235,6 +235,6 @@ main {
 }
 
 .nav-links a {
-  margin-left: 0;              /* gap kullanıyoruz */
+  margin-left: 0;             
 }
 
