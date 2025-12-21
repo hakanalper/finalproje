@@ -1,6 +1,4 @@
-/* =====================
-   GENEL AYARLAR
-===================== */
+
 
 body {
   margin: 0;
@@ -17,9 +15,7 @@ body {
 }
 
 
-/* =====================
-   NAVBAR
-===================== */
+
 
 .nav {
   height: 96px;
@@ -102,9 +98,7 @@ body {
 }
 
 
-/* =====================
-   HERO (ORTA BÖLÜM)
-===================== */
+
 
 .hero {
   /* Navbarın altındaki büyük karşılama alanı */
@@ -223,7 +217,7 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 3s ease, transform 3s ease;
+  transition: opacity 4s ease, transform 4s ease;
 }
 
 .reveal.show {

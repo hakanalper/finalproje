@@ -1,6 +1,4 @@
-/* =====================
-   GENEL AYARLAR
-===================== */
+
 
 body {
   margin: 0;
@@ -17,9 +15,7 @@ body {
 }
 
 
-/* =====================
-   NAVBAR
-===================== */
+
 
 .nav {
   height: 96px;
@@ -98,13 +94,11 @@ body {
 
 .nav-links a:hover {
   color: #f5c453;
-  /* Üzerine gelince altın olur */
+ 
 }
 
 
-/* =====================
-   HERO (ORTA BÖLÜM)
-===================== */
+
 
 .hero {
   /* Navbarın altındaki büyük karşılama alanı */
@@ -120,30 +114,30 @@ body {
 }
 
 .hero-logo {
-  /* Ortadaki büyük logo (SVG) */
-  width: 40vw;          /* Ekranın %40’ı genişlik */
-  max-width: 520px;     /* Çok büyümesin */
-  min-width: 260px;     /* Çok da ufalmayın */
-  height: auto;         /* Oranı koru */
+  
+  width: 40vw;         
+  max-width: 520px;     
+  min-width: 260px;     
+  height: auto;         
   display: block;
-  margin-bottom: 8px;   /* Altındaki yazıdan hafif boşluk */
+  margin-bottom: 8px;   
 }
 
 .hero-title {
-  /* İstersen kullanırsın, şu an yoksa da sorun değil */
+  
   font-size: 2.4rem;
   letter-spacing: 0.25rem;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
-  color: #f5c453;       /* Altın ton */
-  font-style: italic;   /* Italic yazı */
+  color: #f5c453;       
+  font-style: italic;   
 }
 
 .hero-text {
-  /* Daha uzun açıklama metni */
-  max-width: 900px;         /* Çok yayılmasın */
+  
+  max-width: 900px;         
   font-size: 1.4rem;
   color: #b0b3c0;
   line-height: 1.6;
@@ -194,4 +188,15 @@ body {
   width: 100%;
   max-width: 120px;
   opacity: 0.8;
+}
+/* GENEL REVEAL EFEKTİ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }

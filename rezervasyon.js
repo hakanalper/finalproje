@@ -1,5 +1,4 @@
-// DEMO masa datası: x/y yüzde (%). Krokinin üstünde doğru yere koyarsın.
-// Not: ID'ler benzersiz olmalı.
+
 const TABLES = [
   { id: "T1", x: 9, y: 55 },
   { id: "T2", x: 9, y: 75 },
@@ -21,7 +20,7 @@ const TABLES = [
 ];
 
 const STORAGE_KEY = "novaletta_table_status_v1";
-// status: "empty" | "booked"
+
 let statusMap = loadStatus();
 let selectedTableId = null;
 

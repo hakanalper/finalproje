@@ -1,6 +1,4 @@
-/* =====================
-   RESET + GENEL
-===================== */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { height: 100%; }
@@ -10,15 +8,13 @@ body {
   color: #ffffff;
   font-family: system-ui, sans-serif;
 
-  /* Footer'ı alta sabitleyen yapı */
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* =====================
-   NAVBAR
-===================== */
+
 .nav {
   height: 96px;
   padding: 0 40px;
@@ -74,17 +70,13 @@ body {
   color: #f5c453;
 }
 
-/* =====================
-   ANA İÇERİK ALANI
-   Footer'ın alta inmesi için flex:1
-===================== */
+
 main {
   flex: 1;                  /* KRİTİK */
   padding-top: 120px;       /* fixed navbar boşluğu */
 }
 
-/* Eğer sayfada main yoksa hero gibi section'lar var.
-   Hero'yu direkt sayfa ana içerik yapıyorsan bu da iş görür. */
+
 .hero {
   min-height: calc(100vh - 96px);
   display: flex;
@@ -138,11 +130,9 @@ main {
   letter-spacing: 0.15em;
 }
 
-/* =====================
-   FOOTER (EN ALTA YAPIŞIK)
-===================== */
+
 .site-footer {
-  margin-top: auto; /* KRİTİK: içerik kısa olsa bile en alta iter */
+  margin-top: auto; 
   background-color: #050816;
   color: #ccc;
   padding: 60px 20px;
@@ -189,9 +179,7 @@ main {
   opacity: 0.8;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+
 @media (max-width: 900px) {
   .nav {
     padding: 0 18px;

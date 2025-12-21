@@ -1,7 +1,4 @@
-/* =================================================
-   MENÜ SAYFASI GENEL ALANI
-   menu.html içindeki <main class="menu-page">
-================================================= */
+
 
 .menu-page {
   padding: 120px 32px 64px;
@@ -12,10 +9,7 @@
 }
 
 
-/* =================================================
-   MENÜ BAŞLIĞI
-   "MENÜ" yazısı
-================================================= */
+
 
 .menu-title {
   font-size: 2.4rem;
@@ -29,9 +23,7 @@
 }
 
 
-/* =================================================
-   TÜM KARTLARI TUTAN ALAN
-================================================= */
+
 
 .menu-cards {
   display: grid;
@@ -51,9 +43,7 @@
 }
 
 
-/* =================================================
-   TEK BİR MENÜ KARTI
-================================================= */
+
 
 .menu-card {
   display: block;
@@ -81,9 +71,7 @@
 }
 
 
-/* =================================================
-   KARTA HOVER OLDUĞUNDA
-================================================= */
+
 
 .menu-card:hover {
   transform: translateY(-6px);
@@ -94,10 +82,7 @@
 }
 
 
-/* =================================================
-   FOTO / GÖRSEL ALANI
-   Şimdilik boş, sonra arka plan verilecek
-================================================= */
+
 
 .menu-card-image {
   height: 180px;
@@ -142,4 +127,18 @@
   object-fit: cover;     /* foto kırpılır ama bozulmaz */
   display: block;
 }
+/* GENEL REVEAL EFEKTİ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 2s ease, transform 2s ease;
+}
 
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.35s; }
+.delay-3 { transition-delay: 0.55s; }
+.delay-4 { transition-delay: 0.75s; }
